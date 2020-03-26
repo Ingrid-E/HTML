@@ -30,23 +30,80 @@ function sketchProc(processing){
     }
 
     processing.drawGame = function(world){
-        processing.background(0,0,0);
-        processing.fill(240,10,240);
-       if(world == 1)processing.image(p1,0,0)
-       if(world == 2)processing.image(p2,0,0)
-       if(world == 3)processing.image(p3,0,0)
-       if(world == 4)processing.image(p4,0,0)
-       if(world == 5)processing.image(p5,0,0)
-       if(world == 6)processing.image(p6,0,0)
-       if(world == 7)processing.image(p5,0,0)
-       if(world == 8)processing.image(p4,0,0)
-       if(world == 9)processing.image(p3,0,0)
-       if(world == 10)processing.image(p2,0,0)
-       if(world == 11)processing.image(p1,0,0)
+        processing.background(0, 0, 0);
+        processing.fill(255, 255, 0);
+        processing.arc(0, 0, 0, 0, Math.processing=(Math.PI), (Math.PI*3.8)/2); 
+
+       if(world == 1){
+         processing.fill(255, 255, 0);
+         processing.arc(300, 110, 90, 90, Math.processing/4, (Math.PI*3.5)/2);
+         processing.fill(0, 0, 0);
+         processing.ellipse(300, 90, 8, 8);
+         processing.image(p1,0,0);}
+       if(world == 2){
+         processing.fill(255, 255, 0);
+         processing.arc(300, 110, 90, 90, Math.processing/4.5, (Math.PI*3.6)/2);
+         processing.fill(0, 0, 0);
+         processing.ellipse(300, 90, 8, 8);
+         processing.image(p2,0,0);}
+       if(world == 3){
+         processing.fill(255, 255, 0);
+         processing.arc(300, 110, 90, 90, Math.processing/5, (Math.PI*3.7)/2);
+         processing.fill(0, 0, 0);
+         processing.ellipse(300, 90, 8, 8);
+         processing.image(p3,0,0);}
+       if(world == 4){
+         processing.fill(255, 255, 0);
+         processing.arc(300, 110, 90, 90, Math.processing/5.5, (Math.PI*3.8)/2);
+         processing.fill(0, 0, 0);
+         processing.ellipse(300, 90, 8, 8);
+         processing.image(p4,0,0);}
+       if(world == 5){
+         processing.fill(255, 255, 0);
+         processing.arc(300, 110, 90, 90, Math.processing/6, (Math.PI*3.9)/2);
+         processing.fill(0, 0, 0);
+         processing.ellipse(300, 90, 8, 8);
+         processing.image(p5,0,0);}
+       if(world == 6){
+         processing.fill(255, 255, 0);
+         processing.arc(300, 110, 90, 90, Math.processing*0, (Math.PI*4)/2);
+         processing.fill(0, 0, 0);
+         processing.ellipse(300, 90, 8, 8);
+         processing.image(p6,0,0);}
+       if(world == 7){
+         processing.fill(255, 255, 0);
+         processing.arc(300, 110, 90, 90, Math.processing/6, (Math.PI*3.9)/2);
+         processing.fill(0, 0, 0);
+         processing.ellipse(300, 90, 8, 8);
+         processing.image(p5,0,0);}
+       if(world == 8){
+         processing.fill(255, 255, 0);
+         processing.arc(300, 110, 90, 90, Math.processing/5.5, (Math.PI*3.8)/2);
+         processing.fill(0, 0, 0);
+         processing.ellipse(300, 90, 8, 8);
+         processing.image(p4,0,0);}
+       if(world == 9){
+         processing.fill(255, 255, 0);
+         processing.arc(300, 110, 90, 90, Math.processing/5, (Math.PI*3.7)/2);
+         processing.fill(0, 0, 0);
+         processing.ellipse(300, 90, 8, 8);
+         processing.image(p3,0,0);}
+       if(world == 10){
+         processing.fill(255, 255, 0);
+         processing.arc(300, 110, 90, 90, Math.processing/4.5, (Math.PI*3.6)/2);
+         processing.fill(0, 0, 0);
+         processing.ellipse(300, 90, 8, 8);
+         processing.image(p2,0,0);}
+       if(world == 11){
+         processing.fill(255, 255, 0);
+         processing.arc(300, 110, 90, 90, Math.processing/4, (Math.PI*3.5)/2);
+         processing.fill(0, 0, 0);
+         processing.ellipse(300, 90, 8, 8);
+         processing.image(p1,0,0);}
     }
 
     processing.onTic = function (world) {
-      if(world==11) return processing.onTic(1)
+      if(world==11) return processing.onTic(0)
       return world+1 
     }
     
